@@ -1,0 +1,114 @@
+
+
+@font-face {
+    font-family: 'News Cycle';
+    src: url('../fonts/news_cycle.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'News Cycle';
+    src: url('../fonts/news_cycle.ttf') format('truetype');
+}
+
+main {
+    padding: 5px 10px;
+}
+
+@media not print {
+
+    body {
+        background-color: #fbf8e5;
+        color: #635959;
+        font-family: 'News Cycle'; 
+
+    }
+
+    header {
+        background-color: #242323;
+        color: #EFEFEF;
+        padding: 20px 50px;
+        font-family: 'Contrail One';
+    }
+
+    h3, article h4 {
+        color: #8C1018;
+    }
+
+    article a {
+        color: #314052;
+    }
+
+}            
+
+header > h1 {
+    letter-spacing: 5px;
+}
+
+article {
+    margin: 5px 0px;
+    padding: 5px 5px;    
+    box-shadow: -1px -1px 6px #888888;
+}
+
+article > h2 h4 {
+    font-weight: bolder;
+    color: #8C1018;
+}
+
+article > h2::before {
+    content: "\002329";
+    color: #F9C989;
+}
+article > h2::after {
+    content: "\00232A";
+    color: #F9C989;
+}
+footer {
+    background-color: #A5B7C5;
+    padding: 5px 10px;
+}
+article > a {
+    color: #314052;
+}
+header h1 {
+    font-size: 4em;
+    }
+main figure > figcaption {
+    font-size: 0.75em;
+    font-style: italic;
+    }
+main figure > figcaption::before {
+    content: 'Pictured above: ';
+    font-weight: bold;
+    }
+
+article > time {
+    float: right;
+    font-size: 0.75em;
+    font-weight: lighter;
+    }
+
+@media not print {
+    main > h3 {
+        font-size: 2em;
+    }
+}
+
+@media print {
+    header {
+        padding: 0px;
+        }
+
+    article {
+        box-shadow: none;
+        } 
+
+        header h1 {        
+            font-size: 2em;
+        }
+        
+    header h2 {
+        display: none;
+        }
+    
+}
