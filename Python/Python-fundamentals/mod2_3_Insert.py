@@ -36,8 +36,26 @@
 # print three_words
 # [ ] complete coding task described above
 
-three_words = ["One", "Two", "Three"]
-print(three_words)
-three_words[0] = three_words[0].upper()
-three_words[2] = three_words[2].swapcase()
-print(three_words)
+# three_words = ["One", "Two", "Three"]
+# print(three_words)
+# three_words[0] = three_words[0].upper()
+# three_words[2] = three_words[2].swapcase()
+# print(three_words)
+##########################################################
+# Task 3
+
+# [ ] insert a name from user input into the party_list in the second position (index 1)
+party_list = ["Joana", "Alton", "Tobias"]
+user_input = input("Enter a name to invite to a party: ")
+print("Your party list before the insert: ", party_list)
+party_list.insert(1, user_input)
+print("Your party list after insert: ", party_list)
+# [ ] print the updated list
+##########################################################################
+# TASK 4
+# FIX THE ERROR
+# [ ] Fix the Error
+# tree_list = ["oak"]
+# print("tree_list before =", tree_list)
+# tree_list.insert(1,"pine")
+# print("tree_list after  =", tree_list)

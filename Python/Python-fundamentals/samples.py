@@ -1,6 +1,7 @@
-days = [12, 9, 1]
+cities = ["New York", "Shanghai", "Munich", "Tokyo", "Dubai", "Mexico City", "São Paulo", "Hyderabad"]
 
-days.append("Wednesday")
-days.append(14)
-print(days)
-print(days[-1])
+for city in cities:
+    if city.startswith("P"):
+        print(city)
+    elif city.startswith("D"):
+        print(city)
