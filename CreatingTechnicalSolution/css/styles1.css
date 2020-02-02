@@ -1,0 +1,51 @@
+body {
+    background-color: #a8d8d6;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+header {
+    border-style: groove;
+    border-color: white;
+    background-color: #065143;
+    font-weight: bold;
+}
+
+header > h1 {
+    color: whitesmoke;
+    margin-left: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+}
+
+p {
+    background-color: #065143;
+    color: #70b77e;
+    padding: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul {
+    background-color: #390624;
+    color: whitesmoke;
+    padding: 1em;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-family: sans-serif;
+}
+li {
+    margin-left: 20px;
+}
+footer {
+    border-style: groove;
+    border-color: white;
+    background-color: #065143;
+    text-align: center;
+    color: #7ce7d4;
+}
+footer > a {
+    color: #7ce7d4;
+}
