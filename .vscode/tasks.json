@@ -3,7 +3,8 @@
     "command": "node-sass",
     "isShellCommand": true,
     "args": [
-        "sass/sass/style.scss",
-        "sass/sass/style.css"
+        "AdvancedCSS/BEM/css/main.scss",
+        "AdvancedCSS/BEM/css/main.css",
+
     ]
 }
