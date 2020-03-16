@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery demo</title>
+</head>
+<body>
+    <div style="color:black" class="stop">first</div>
+    <div style="color:black">second</div>
+    <div style="color:black">third</div>
+    <div id="target" style="color:black">Fourth (Target)</div>
+    <div style="color:black">Fifth</div>
+    <div style="color:black">Sixth</div>
+    <div style="color:black" class="last">Seventh</div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+            //update previous element
+            // $('#target').prev().attr('style', 'color:red')
+
+            //updates all previous element
+            // $('#target').prevAll().attr('style', 'color:red')
+
+            //updates all previous elements until but not including .stop, but your must add the selector for the until
+            // $('#target').prevUntil('.stop').attr('style', 'color:red')
+
+            //updates next element
+            // $('#target').next().attr('style', 'color:red')
+
+             //updates all next elements
+            //  $('#target').nextAll().attr('style', 'color:red')
+
+              //updates next element
+            $('#target').nextUntil('.last').attr('style', 'color:red')
+
+        });
+
+
+    </script>
+
+</body>
+</html>
