@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery Attributes</title>
+</head>
+<body>
+  
+    <h1 custom="banner">Hello, world!</h1>
+   <header>
+       <h1>Inside Header</h1>
+       <div>
+        <h1>Inside Div</h1>
+       </div>
+   </header>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+        //    use square brackets []
+      //use an angle bracket to for parent > child
+      $('header > h1').text('Parent > Child syntax');
+      //use a space instead of an angle bracket to denote descendents
+      $('header div h1').text('parent descendent');
+      
+        });
+
+
+    </script>
+
+</body>
+</html>
