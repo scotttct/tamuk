@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery demo Event Handlers</title>
+</head>
+<body>
+   <div id="target">Event Handlers</div>
+
+   <div id="display">Another Event</div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+        //  $('#target').click(function() {
+        //      //this is the click event handler for the div element with id='target'
+        //      $('#display').text('Div was clicked!');
+
+        //  })
+
+            $('div').click(function() {
+                //this will be the dom element of the item that was raised by the event
+                //convert to a jquery object
+                $(this).text("Clicked!");
+            });
+        });
+
+
+    </script>
+
+</body>
+</html>

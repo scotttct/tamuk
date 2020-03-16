@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery demo</title>
+    <style>
+        body {
+            font-size: 18px;
+        }
+        div {
+            margin-top:.1em;
+
+        }
+    </style>
+</head>
+<body>
+  <div id="target"></div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+            //will modify the text inside an element
+        //  $('#target').text('Updated!')
+
+        //use of html will use any html elements attached as well
+        $('#target').html('<h2><strong>Updated!</strong></h2> <p> You got this!</p>')
+        });
+
+
+    </script>
+
+</body>
+</html>
