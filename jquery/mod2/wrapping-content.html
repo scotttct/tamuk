@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        btn {
+            font-size: 1em;
+        }
+        .red {
+            color:red;
+        }
+    </style>
+    <title>jquery demo Wrapping elements</title>
+</head>
+<body>
+   <div><h1>Manipulating Dom - Wrapping Elements</h1></div>
+
+   <div><button type="button" class="btn" id="target">Execute</button></div>
+  
+       <div class="wrap-me">First content</div>
+       <div class="wrap-me">Second Content</div>
+
+  
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+            $('#target').click(function (event){
+               
+               //wraps each div with the class wrap-me with another div with class red
+            //    $('.wrap-me').wrap('<div class="red"></div>');
+
+                //wraps both divs with a class of wrap-me in a div with the class of red
+            //    $('.wrap-me').wrapAll('<div class="red"></div>');
+
+                //inserts a div with the class of red inside the div with the class of wrap-me
+               $('.wrap-me').wrapInner('<div class="red"></div>');
+              
+            });
+
+
+        });
+
+
+    </script>
+
+</body>
+</html>

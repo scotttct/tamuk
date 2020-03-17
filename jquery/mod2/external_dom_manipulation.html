@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery demo Manipulating Dom</title>
+</head>
+<body>
+   <div><h1>Manipulating Dom with before and after</h1></div>
+
+   <div><button type="button" class="btn" id="target">Execute</button></div>
+   <div id="display">
+       <div>This content was already here</div>
+   </div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+            $('#target').click(function (event){
+               //puts the div before the #display element div 
+               $('#display').before('<div>This is at the beginning</div>');
+
+               //Puts the div after 
+               $('#display').after('<div>This is at the end</div>');
+            });
+
+
+        });
+
+
+    </script>
+
+</body>
+</html>

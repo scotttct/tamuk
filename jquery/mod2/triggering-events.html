@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery demo triggering events</title>
+    <style>
+        div {
+            margin-top: .1em;
+        }
+        .btn {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+   <div ><h1>Event Handlers - Triggering Events Example</h1></div>
+
+    <form action="post">
+        <div><button type="button" class="btn updater">First</button></div>
+        <div><button type="button" class="btn updater">Second</button></div>
+        <div><button type="button" class="btn" id="target">Execute event handler!!!</button></div>
+
+
+    </form>
+
+   <div id="display"></div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+         $('button.updater').click(function() {
+             var existingText = $('#display').text();
+             var buttonText = $(this).text();
+             $('#display').text(existingText + ' - ' + buttonText);
+
+         });
+
+         $('#target').click(function () {
+             //performs click on the buttons
+            //$('button.updater').click();
+
+            //just execute the event handler with trigger
+            // $('button.updater').trigger('click');
+
+            //execute first only using triggerHandler
+            $('button.updater').triggerHandler('click');
+         });
+        });
+
+
+    </script>
+
+</body>
+</html>

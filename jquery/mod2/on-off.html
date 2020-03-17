@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery demo Event Handler on and off</title>
+    <style>
+        .btn {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+   <div id="target">Event Handlers ON and OFF</div>
+
+    <form action="post">
+        <div><button type="button" class="btn validate">first button</button></div>
+        <div><button type="button" class="btn validate">second button</button></div>
+        <div><button type="button" class="btn">third button</button></div>
+    </form>
+
+   <div id="display"></div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+            $('form').on('click', 'button.validate', function () {
+                $('#display').text('Clicked!!!');
+            });
+
+        });
+
+
+    </script>
+
+</body>
+</html>

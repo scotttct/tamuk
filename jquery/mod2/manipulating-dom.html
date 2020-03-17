@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery demo Manipulating Dom</title>
+</head>
+<body>
+   <div><h1>Manipulating Dom with append and prepend</h1></div>
+
+   <div><button type="button" class="btn" id="target">Execute</button></div>
+   <div id="display">
+       <div>This content was already here</div>
+   </div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+            $('#target').click(function (event){
+               //prepend at the beginning
+               $('#display').prepend('<div>This is at the beginning</div>');
+
+               //append goes at the end of the element
+               $('#display').append('<div>This is at the end</div>');
+            });
+
+
+        });
+
+
+    </script>
+
+</body>
+</html>

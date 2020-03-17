@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery demo Event Handler Delegate</title>
+    <style>
+        div {
+            margin-top: .1em;
+        }
+        .btn {
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+   <div ><h1>Event Handlers Single Event Execution Example</h1></div>
+
+    <form action="post">
+        <div><button type="button" class="btn" id="target">Execute!!!</button></div>
+
+    </form>
+
+   <div id="display"></div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+            $('#target').one('click', function() {
+                $('#display').text($('#display').text() + "Clicked!!");
+            });
+        });
+
+
+    </script>
+
+</body>
+</html>
