@@ -1,0 +1,72 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <style>
+  body {
+   font-family: Verdana;
+  }
+  h1, h2, h3 {
+   color: darkblue;
+  }
+  .rating-circle {
+   height: 2em;
+   width: 2em;
+   border: .1em solid black;
+   border-radius: 1.1em;
+   display: inline-block;
+   margin: 0;
+   padding: .1em;
+  }
+
+  .rating-hover {
+   background-color: yellow;
+  }
+
+  .rating-chosen {
+   background-color: green;
+  }
+ </style>
+</head>
+<body>
+ <h1>Contoso Web Developer Conference</h1>
+ <h2>Finding elements using jQuery</h2>
+ <div>This session is about identifying elements using jQuery methods and selectors.</div>
+ <h3>Rate this session</h3>
+ <div id="rating-container" max-value="5"></div>
+
+<div>
+  <label for="max-value">Enter max value:</label>
+  <input type="text" id="max-value" />
+  <button type="button" id="update-max-value">Update max value</button>
+</div>
+
+ <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+
+ <script>
+        // your answer would go here
+        $(document).ready(makeCircles);
+        var max = 5;
+
+        function makeCircles() {
+          i = 0;
+          while (i < max) {
+            $("#rating-container").append("<div class='rating-circle'></div>");
+            i++;
+          }
+        }
+        $("#update-max-value").click(function() {
+          max = $("#max-value").val();
+          $("#rating-container").empty();
+          makeCircles();
+        })
+        $("#rating-container").on( "mouseenter",".rating-circle",function() {$(this).prevAll().andSelf().addClass("rating-hover")
+          }).on("mouseleave", ".rating-circle",function(){
+          $(this).prevAll().andSelf().removeClass("rating-hover");
+        });
+        $("#rating-container").on("click", ".rating-circle",function(){
+          $(".rating-circle").removeClass("rating-chosen");
+          $(this).prevAll().andSelf().addClass("rating-chosen");
+        })
+ </script>
+</body>
+</html>

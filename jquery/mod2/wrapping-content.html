@@ -16,12 +16,19 @@
 <body>
    <div><h1>Manipulating Dom - Wrapping Elements</h1></div>
 
-   <div><button type="button" class="btn" id="target">Execute</button></div>
+   <div><button type="button" class="btn" id="target_btn">Execute</button></div>
   
        <div class="wrap-me">First content</div>
        <div class="wrap-me">Second Content</div>
 
-  
+       <div id="parent">
+       
+            <div class="sample">Text</div>
+            <div class="demo">Text</div>
+            <div id="target">Text</div>
+            <div class="demo">Text</div>
+        
+    </div>
     
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -30,7 +37,7 @@
     <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
     <script>
         $(function () {
-            $('#target').click(function (event){
+            $('#target_btn').click(function (event){
                
                //wraps each div with the class wrap-me with another div with class red
             //    $('.wrap-me').wrap('<div class="red"></div>');
@@ -39,8 +46,14 @@
             //    $('.wrap-me').wrapAll('<div class="red"></div>');
 
                 //inserts a div with the class of red inside the div with the class of wrap-me
-               $('.wrap-me').wrapInner('<div class="red"></div>');
+            //    $('.wrap-me').wrapInner('<div class="red"></div>');
+
+            //    $('#parent').children().wrapAll('<section></section>');
               
+            // $('#target').after('<section>New element</section>');
+
+            $('#target').append('<section>New element</section>');
+
             });
 
 

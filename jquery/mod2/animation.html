@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        btn {
+            font-size: 1em;
+        }
+        #box {
+            height: 5em;
+            width: 5em;
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+    <title>jquery demo Animation</title>
+</head>
+<body>
+   <div><h1>Manipulating Dom - Animation</h1></div>
+
+   <div><button type="button" class="btn" id="executer">Execute</button></div>
+  
+       <div class="" id="box">Demo Content</div>
+       
+
+  
+    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+        $(function () {
+            $('#executer').click(function (event){
+               //hide
+               //$('#box').hide(1000);
+              //hide
+               $('#box').toggle(1000);
+               //
+           
+              
+            });
+
+
+        });
+
+
+    </script>
+
+</body>
+</html>
