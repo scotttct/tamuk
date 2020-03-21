@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body, btn, form-control {
+        font-size: 16px;
+        font-family: Verdana;
+        }
+
+        div {
+        margin-bottom: 3px;
+        }
+    </style>
+    <title>jquery demo postJson Method</title>
+</head>
+<body>
+    <h3>postJason Demo</h3>
+    <p>
+      Simple demo demonstrating the postJson Method
+    </p>
+    
+    <p>
+      Getting a person object as json data and putting data into text boxes
+    </p>
+    
+    <div>
+      <label for="first-name">First name:</label>
+      <input type="text" class="form-control" id="first-name" />
+    </div>
+    <div>
+      <label for="last-name">Last name:</label>
+      <input type="text" class="form-control" id="last-name" />
+    </div>
+    <div>
+      <button type="button" class="btn" id="execute">Execute</button>
+    </div>
+   <div id="output">Data will go here</div>
+ 
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
+    <script>
+     $(function() {
+      $('#execute').click(function(){
+          var person = {
+              firstName: $('#first-name').val(), lastName: $('#last-name').val()
+          };
+          $.post('/api/demo', person).done(function (data) {
+              $('output').text(data.firstName + ' ' + data.lastName);
+          })
+      })
+     }); 
+
+    </script>
+
+</body>
+</html>

@@ -24,9 +24,13 @@
    <div><button type="button" class="btn" id="executer">Execute</button></div>
   
        <div class="" id="box">Demo Content</div>
-       
-
-  
+        
+       <div id="target">
+        <section>
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" />
+        </section>
+    </div>
     
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -35,19 +39,24 @@
     <!-- <script src="scripts/jquery-3.4.1.min.js"></script> -->
     <script>
         $(function () {
-            $('#executer').click(function (event){
-               //hide
-               $('#box').hide(1000).promise().done(function() {
-                   $('#output').text('Box is now hidden');
-               });
+            // $('#executer').click(function (event){
+            //    //hide
+            //    $('#box').hide(1000).promise().done(function() {
+            //        $('#output').text('Box is now hidden');
+            //    });
                
               //hide
             //    $('#box').toggle(1000);
                //
            
               
-            });
-
+            // });
+            // $('#execute').click(function () {
+            //     $.getScript('/scripts/main.js').done(function() {
+            //         newFunction();
+            //     });
+            // })
+            $('section input').addClass('form-control');
 
         });
 
